@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Maintenance Report - BNSF HQ Campus - February 07, 2026</title>
+<style>
+  /* Reset */
+  body, table, td, th { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2d2d2d;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+  }
+  /* Header - JLL Dark/Orange */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    padding: 24px 32px;
+  }
+  .header h1 {
+    font-size: 22px;
+    margin: 0 0 4px 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #e8730e;
+    font-weight: 600;
+  }
+  .header .date-line {
+    font-size: 13px;
+    color: #a0aec0;
+    margin-top: 6px;
+  }
+  /* JLL orange accent bar */
+  .accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #e8730e 0%, #ff9a3c 100%);
+  }
+  /* Sections */
+  .section {
+    padding: 20px 32px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .section:last-of-type {
+    border-bottom: none;
+  }
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e8730e;
+    display: inline-block;
+  }
+  /* Executive summary bullets */
+  .exec-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .exec-bullets li {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background: #f8f9fa;
+    border-left: 4px solid #e8730e;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+  }
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .data-table th {
+    background: #1a1a2e;
+    color: #ffffff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .data-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .data-table tr:nth-child(even) td {
+    background: #f8f9fa;
+  }
+  .data-table tr:hover td {
+    background: #fff3e6;
+  }
+  /* Priority badges */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-p1 { background: #dc3545; }
+  .badge-p2 { background: #fd7e14; }
+  .badge-p3 { background: #ffc107; color: #1a1a2e; }
+  .badge-p4 { background: #28a745; }
+  .badge-p5 { background: #6c757d; }
+  /* SLA indicators */
+  .sla-indicator {
+    font-size: 16px;
+  }
+  /* Watchlist alert */
+  .watchlist-alert {
+    background: #fff5f5;
+    border: 1px solid #feb2b2;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+  }
+  .watchlist-alert .alert-title {
+    color: #dc3545;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  /* KPI cards */
+  .kpi-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .kpi-card {
+    flex: 1;
+    min-width: 120px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 12px 16px;
+    text-align: center;
+    border-top: 3px solid #e8730e;
+  }
+  .kpi-card .kpi-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .kpi-card .kpi-label {
+    font-size: 11px;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  /* Trend arrows */
+  .trend-up { color: #dc3545; }
+  .trend-down { color: #28a745; }
+  .trend-flat { color: #718096; }
+  .trend-up-good { color: #28a745; }
+  .trend-down-bad { color: #dc3545; }
+  /* Action items */
+  .action-high {
+    background: #fff5f5;
+    border-left: 4px solid #dc3545;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 0 4px 4px 0;
+  }
+  .action-medium {
+    background: #fffbeb;
+    border-left: 4px solid #ffc107;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 0 4px 4px 0;
+  }
+  .action-low {
+    background: #f0fff4;
+    border-left: 4px solid #28a745;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 0 4px 4px 0;
+  }
+  /* Footer */
+  .footer {
+    background: #1a1a2e;
+    color: #a0aec0;
+    padding: 16px 32px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .footer a {
+    color: #e8730e;
+    text-decoration: none;
+  }
+  .footer .powered-by {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #718096;
+  }
+  /* PM status */
+  .pm-done {
+    color: #28a745;
+    font-weight: 600;
+  }
+  .pm-pending {
+    color: #ffc107;
+    font-weight: 600;
+  }
+  .pm-overdue {
+    color: #dc3545;
+    font-weight: 600;
+  }
+  /* Priority group header */
+  .priority-group {
+    background: #edf2f7;
+    padding: 6px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #1a1a2e;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .header { padding: 16px; }
+    .section { padding: 16px; }
+    .header h1 { font-size: 18px; }
+    .data-table { font-size: 11px; }
+    .data-table th, .data-table td { padding: 6px 8px; }
+    .kpi-row { flex-direction: column; }
+    .kpi-card { min-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<div class="header">
+  <h1>Daily Maintenance Report</h1>
+  <div class="subtitle">BNSF HQ Campus &mdash; JLL Facility Management</div>
+  <div class="date-line">Saturday, February 07, 2026 &bull; 2650 Lou Menk Dr, Fort Worth, TX 76131</div>
+</div>
+<div class="accent-bar"></div>
+
+<div class="section">
+<h2 class="section-title">Executive Summary</h2>
+<ul class="exec-bullets">
+  <li>9 open work orders (1 P1-Emergency, 1 P2-Urgent)</li>
+  <li>4 PMs due today, 2 overdue | Compliance: 20%</li>
+  <li>SLA Alert: 5 BREACHED, 1 at risk (within 4h)</li>
+  <li>Staffing: 3/7 technicians active</li>
+</ul>
+<div class="kpi-row">
+
+  <div class="kpi-card">
+    <div class="kpi-value">9</div>
+    <div class="kpi-label">Open WOs</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">4</div>
+    <div class="kpi-label">PMs Due</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">5</div>
+    <div class="kpi-label">SLA Breached</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">3/7</div>
+    <div class="kpi-label">Techs Active</div>
+  </div>
+</div></div>
+<div class="section">
+<h2 class="section-title">Open Work Orders (9)</h2>
+
+<table class="data-table">
+<thead>
+  <tr>
+    <th>WO#</th>
+    <th>Description</th>
+    <th>Building</th>
+    <th>Trade</th>
+    <th>Assigned Tech</th>
+    <th>Age (hrs)</th>
+    <th>SLA</th>
+  </tr>
+</thead>
+<tbody>
+<tr><td colspan="7" class="priority-group"><span class="badge badge-p1">P1</span> Emergency (1)</td></tr>
+  <tr>
+    <td><strong>WO-50108</strong></td>
+    <td>Fire alarm pull station loose - NOC entrance</td>
+    <td>Network Operations Center</td>
+    <td>Fire Safety</td>
+    <td>Anthony Garcia</td>
+    <td>61.1</td>
+    <td class="sla-indicator">&#x1F534;</td>
+  </tr>
+<tr><td colspan="7" class="priority-group"><span class="badge badge-p2">P2</span> Urgent (1)</td></tr>
+  <tr>
+    <td><strong>WO-50102</strong></td>
+    <td>UPS battery replacement - server room B</td>
+    <td>Data Center</td>
+    <td>Electrical</td>
+    <td>Carlos Reyes</td>
+    <td>14.7</td>
+    <td class="sla-indicator">&#x1F534;</td>
+  </tr>
+<tr><td colspan="7" class="priority-group"><span class="badge badge-p3">P3</span> High (3)</td></tr>
+  <tr>
+    <td><strong>WO-50106</strong></td>
+    <td>Roof exhaust fan #4 bearing noise</td>
+    <td>Data Center</td>
+    <td>HVAC</td>
+    <td>Robert Chen</td>
+    <td>15.9</td>
+    <td class="sla-indicator">&#x1F534;</td>
+  </tr>
+  <tr>
+    <td><strong>WO-50107</strong></td>
+    <td>Water leak under sink in 2nd floor men's restroom</td>
+    <td>Main HQ</td>
+    <td>Plumbing</td>
+    <td>James Parker</td>
+    <td>7.1</td>
+    <td class="sla-indicator">&#x1F7E1;</td>
+  </tr>
+  <tr>
+    <td><strong>WO-50100</strong></td>
+    <td>Hot water heater pilot light out - maintenance shop</td>
+    <td>Maintenance Shop</td>
+    <td>Plumbing</td>
+    <td>James Parker</td>
+    <td>2.8</td>
+    <td class="sla-indicator">&#x1F7E2;</td>
+  </tr>
+<tr><td colspan="7" class="priority-group"><span class="badge badge-p4">P4</span> Routine (3)</td></tr>
+  <tr>
+    <td><strong>WO-50104</strong></td>
+    <td>Parking garage A level 3 light outage section C</td>
+    <td>Parking Garage A</td>
+    <td>Electrical</td>
+    <td>Carlos Reyes</td>
+    <td>54.8</td>
+    <td class="sla-indicator">&#x1F534;</td>
+  </tr>
+  <tr>
+    <td><strong>WO-50105</strong></td>
+    <td>Clogged floor drain - training center lobby</td>
+    <td>Training Center</td>
+    <td>Plumbing</td>
+    <td>James Parker</td>
+    <td>30.7</td>
+    <td class="sla-indicator">&#x1F534;</td>
+  </tr>
+  <tr>
+    <td><strong>WO-50101</strong></td>
+    <td>Replace ballasts in parking garage B level 2</td>
+    <td>Parking Garage B</td>
+    <td>Electrical</td>
+    <td>Carlos Reyes</td>
+    <td>17.1</td>
+    <td class="sla-indicator">&#x1F7E2;</td>
+  </tr>
+<tr><td colspan="7" class="priority-group"><span class="badge badge-p5">P5</span> Low (1)</td></tr>
+  <tr>
+    <td><strong>WO-50103</strong></td>
+    <td>Broken tile in cafeteria main dining area</td>
+    <td>Cafeteria</td>
+    <td>General</td>
+    <td>David Kim</td>
+    <td>32.6</td>
+    <td class="sla-indicator">&#x1F7E2;</td>
+  </tr>
+</tbody></table></div>
+<div class="section">
+<h2 class="section-title">PM Schedule</h2>
+<div class="kpi-row">
+
+  <div class="kpi-card">
+    <div class="kpi-value">3</div>
+    <div class="kpi-label">Due Today</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">2</div>
+    <div class="kpi-label">Overdue</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">33%</div>
+    <div class="kpi-label">Completion Rate</div>
+  </div>
+</div>
+
+<table class="data-table" style="margin-top:12px">
+<thead><tr>
+  <th>PM ID</th><th>Task</th><th>Building</th><th>Trade</th>
+  <th>Technician</th><th>Status</th>
+</tr></thead><tbody>
+<tr>
+    <td>PM-8000</td>
+    <td>PM - Quarterly emergency generator load test</td>
+    <td>Network Operations Center</td>
+    <td>Electrical</td>
+    <td>Carlos Reyes</td>
+    <td><span class="pm-pending">Pending</span></td>
+  </tr>
+<tr>
+    <td>PM-8002</td>
+    <td>PM - Monthly elevator safety inspection</td>
+    <td>Main HQ</td>
+    <td>Elevator</td>
+    <td>Marcus Williams</td>
+    <td><span class="pm-done">Completed</span></td>
+  </tr>
+<tr>
+    <td>PM-8003</td>
+    <td>PM - Weekly cooling tower water treatment</td>
+    <td>Main HQ</td>
+    <td>HVAC</td>
+    <td>Mike Rodriguez</td>
+    <td><span class="pm-pending">Pending</span></td>
+  </tr>
+<tr>
+    <td>PM-8001</td>
+    <td>PM - Monthly HVAC filter change - Data Center</td>
+    <td>Data Center</td>
+    <td>HVAC</td>
+    <td>Mike Rodriguez</td>
+    <td><span class="pm-overdue">OVERDUE</span></td>
+  </tr>
+<tr>
+    <td>PM-8099</td>
+    <td>PM - Overdue quarterly chiller inspection</td>
+    <td>Data Center</td>
+    <td>HVAC</td>
+    <td>Mike Rodriguez</td>
+    <td><span class="pm-overdue">OVERDUE</span></td>
+  </tr>
+</tbody></table>
+</div>
+<div class="section">
+<h2 class="section-title">Technician Workload</h2>
+
+<table class="data-table">
+<thead><tr>
+  <th>Name</th><th>Trade</th><th>Tasks</th><th>Est. Hours</th>
+  <th>Completed</th><th>Status</th><th>Current Task</th>
+</tr></thead><tbody>
+<tr>
+    <td><strong>Mike Rodriguez</strong></td>
+    <td>HVAC</td>
+    <td>3</td>
+    <td>2.5</td>
+    <td>0</td>
+    <td><span style="color:#6c757d;font-weight:600">NOT-STARTED</span></td>
+    <td>Shift not started</td>
+  </tr>
+<tr>
+    <td><strong>Carlos Reyes</strong></td>
+    <td>Electrical</td>
+    <td>4</td>
+    <td>7.9</td>
+    <td>0</td>
+    <td><span style="color:#28a745;font-weight:600">ACTIVE</span></td>
+    <td>UPS battery replacement - server room B</td>
+  </tr>
+<tr>
+    <td><strong>James Parker</strong></td>
+    <td>Plumbing</td>
+    <td>5</td>
+    <td>5.4</td>
+    <td>0</td>
+    <td><span style="color:#28a745;font-weight:600">ACTIVE</span></td>
+    <td>Water leak under sink in 2nd floor men's restroom</td>
+  </tr>
+<tr>
+    <td><strong>David Kim</strong></td>
+    <td>General</td>
+    <td>5</td>
+    <td>8.1</td>
+    <td>2</td>
+    <td><span style="color:#28a745;font-weight:600">ACTIVE</span></td>
+    <td>En route to assignment</td>
+  </tr>
+<tr>
+    <td><strong>Robert Chen</strong></td>
+    <td>HVAC</td>
+    <td>3</td>
+    <td>5.6</td>
+    <td>1</td>
+    <td><span style="color:#6c757d;font-weight:600">NOT-STARTED</span></td>
+    <td>Shift not started</td>
+  </tr>
+<tr>
+    <td><strong>Marcus Williams</strong></td>
+    <td>Elevator</td>
+    <td>1</td>
+    <td>1.5</td>
+    <td>0</td>
+    <td><span style="color:#ffc107;font-weight:600">BREAK</span></td>
+    <td>On break</td>
+  </tr>
+<tr>
+    <td><strong>Anthony Garcia</strong></td>
+    <td>Fire Safety</td>
+    <td>1</td>
+    <td>0.8</td>
+    <td>0</td>
+    <td><span style="color:#ffc107;font-weight:600">BREAK</span></td>
+    <td>On break</td>
+  </tr>
+</tbody></table></div>
+<div class="section">
+<h2 class="section-title">SLA Watchlist</h2>
+
+<div class="watchlist-alert">
+  <div class="alert-title">&#x26A0; 5 Breached &bull;
+  1 At Risk (within 4h)</div>
+</div>
+
+<table class="data-table">
+<thead><tr>
+  <th>WO#</th><th>Description</th><th>Priority</th>
+  <th>Status</th><th>Detail</th>
+</tr></thead><tbody>
+<tr>
+    <td><strong>WO-50102</strong></td>
+    <td>UPS battery replacement - server room B</td>
+    <td><span class="badge badge-p2">P2</span></td>
+    <td><span style="color:#dc3545;font-weight:700">BREACHED (+10.7h)</span></td>
+    <td>Data Center</td>
+  </tr>
+<tr>
+    <td><strong>WO-50104</strong></td>
+    <td>Parking garage A level 3 light outage section C</td>
+    <td><span class="badge badge-p4">P4</span></td>
+    <td><span style="color:#dc3545;font-weight:700">BREACHED (+30.8h)</span></td>
+    <td>Parking Garage A</td>
+  </tr>
+<tr>
+    <td><strong>WO-50105</strong></td>
+    <td>Clogged floor drain - training center lobby</td>
+    <td><span class="badge badge-p4">P4</span></td>
+    <td><span style="color:#dc3545;font-weight:700">BREACHED (+6.7h)</span></td>
+    <td>Training Center</td>
+  </tr>
+<tr>
+    <td><strong>WO-50106</strong></td>
+    <td>Roof exhaust fan #4 bearing noise</td>
+    <td><span class="badge badge-p3">P3</span></td>
+    <td><span style="color:#dc3545;font-weight:700">BREACHED (+7.9h)</span></td>
+    <td>Data Center</td>
+  </tr>
+<tr>
+    <td><strong>WO-50108</strong></td>
+    <td>Fire alarm pull station loose - NOC entrance</td>
+    <td><span class="badge badge-p1">P1</span></td>
+    <td><span style="color:#dc3545;font-weight:700">BREACHED (+60.1h)</span></td>
+    <td>Network Operations Center</td>
+  </tr>
+<tr>
+    <td><strong>WO-50107</strong></td>
+    <td>Water leak under sink in 2nd floor men's restroom</td>
+    <td><span class="badge badge-p3">P3</span></td>
+    <td><span style="color:#fd7e14;font-weight:700">AT RISK (0.9h left)</span></td>
+    <td>Main HQ</td>
+  </tr>
+</tbody></table></div>
+<div class="section">
+<h2 class="section-title">Yesterday's Completions (2026-02-06)</h2>
+<div class="kpi-row">
+
+  <div class="kpi-card">
+    <div class="kpi-value">7</div>
+    <div class="kpi-label">Completed</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">6</div>
+    <div class="kpi-label">New WOs Created</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">14.9h</div>
+    <div class="kpi-label">Avg Cycle Time</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">1</div>
+    <div class="kpi-label">Callbacks</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-value">1</div>
+    <div class="kpi-label">SLA Breaches</div>
+  </div>
+</div></div>
+<div class="section">
+<h2 class="section-title">Vendor Activity</h2>
+
+<table class="data-table">
+<thead><tr>
+  <th>WO#</th><th>Vendor</th><th>Description</th><th>Building</th>
+  <th>Status</th><th>Scheduled</th><th>Invoice</th>
+</tr></thead><tbody>
+<tr>
+    <td><strong>VWO-3001</strong></td>
+    <td>ThyssenKrupp Elevator</td>
+    <td>Elevator B door operator replacement</td>
+    <td>Main HQ</td>
+    <td>Scheduled</td>
+    <td>2026-02-07</td>
+    <td>Pending</td>
+  </tr>
+<tr>
+    <td><strong>VWO-3002</strong></td>
+    <td>Johnson Controls</td>
+    <td>BAS controller firmware update - all AHUs</td>
+    <td>Data Center</td>
+    <td>In Progress</td>
+    <td>2026-02-06</td>
+    <td>Pending</td>
+  </tr>
+<tr>
+    <td><strong>VWO-3003</strong></td>
+    <td>Siemens Fire Safety</td>
+    <td>Annual fire alarm panel inspection</td>
+    <td>Network Operations Center</td>
+    <td>Awaiting Parts</td>
+    <td>2026-02-10</td>
+    <td>Not Invoiced</td>
+  </tr>
+</tbody></table>
+<p style="margin-top:8px;color:#718096;">Pending Invoices: 3 ($14,550.00 outstanding)</p>
+</div>
+<div class="section">
+<h2 class="section-title">7-Day Trends</h2>
+<table class="data-table"><thead><tr><th>Metric</th>
+<th>01-31</th>
+<th>02-01</th>
+<th>02-02</th>
+<th>02-03</th>
+<th>02-04</th>
+<th>02-05</th>
+<th>02-06</th>
+<th>Trend</th></tr></thead><tbody>
+<tr><td><strong>WO Volume</strong></td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>4</td>
+<td>9</td>
+<td>9</td>
+<td>6</td>
+<td class="trend-up">&#x2191; up</td></tr>
+<tr><td><strong>Avg Cycle (hrs)</strong></td>
+<td>6.5</td>
+<td>6.1</td>
+<td>5.7</td>
+<td>6.5</td>
+<td>13.9</td>
+<td>15.2</td>
+<td>14.9</td>
+<td class="trend-up">&#x2191; up</td></tr>
+<tr><td><strong>PM Compliance (%)</strong></td>
+<td>100%</td>
+<td>50%</td>
+<td>67%</td>
+<td>71%</td>
+<td>100%</td>
+<td>67%</td>
+<td>75%</td>
+<td class="trend-up-good">&#x2191; up</td></tr>
+</tbody></table>
+</div>
+<div class="section">
+<h2 class="section-title">Action Items (5)</h2>
+<h3 style="margin:12px 0 8px 0;color:#1a1a2e;">Tony Vita</h3>
+<div class="action-high"><span class="badge badge-p1">HIGH</span> Approve overtime for Carlos Reyes - UPS battery replacement requires after-hours work <span style="color:#718096">[WO-50107]</span> &mdash; <em>noon</em></div>
+<div class="action-high"><span class="badge badge-p1">HIGH</span> Review ThyssenKrupp elevator repair proposal ($4,500) - door operator replacement <span style="color:#718096">[VWO-3001]</span> &mdash; <em>EOD</em></div>
+<h3 style="margin:12px 0 8px 0;color:#1a1a2e;">Juan Guerra</h3>
+<div class="action-medium"><span class="badge badge-p3">MEDIUM</span> Reassign PM backlog - 1 overdue chiller inspection needs scheduling <span style="color:#718096">[PM-8099]</span> &mdash; <em>EOD</em></div>
+<div class="action-high"><span class="badge badge-p1">HIGH</span> Coordinate with NOC manager on fire alarm pull station repair window <span style="color:#718096">[WO-50109]</span> &mdash; <em>ASAP</em></div>
+<div class="action-medium"><span class="badge badge-p3">MEDIUM</span> Review weekly PM compliance trend - declining 3 days running &mdash; <em>EOD</em></div>
+</div>
+<div class="section">
+<h2 class="section-title">New ADRs for Review (2)</h2>
+
+<div style="background:#f8f9fa;border-radius:6px;padding:12px 16px;margin-bottom:8px;">
+  <div style="font-weight:700;color:#1a1a2e;">
+    [ADR-047] Adopt predictive maintenance scheduling for HVAC fleet
+    <span class="badge badge-p3">proposed</span>
+  </div>
+  <div style="font-size:12px;color:#718096;margin-top:4px;">
+    Impact: HVAC Operations / PM Scheduling
+  </div>
+  <div style="margin-top:4px;">Replace calendar-based PM schedules with sensor-driven predictive triggers for the 12 main AHUs. Expected to reduce unnecessary PMs by 20% while catching failures earlier.</div>
+</div>
+
+<div style="background:#f8f9fa;border-radius:6px;padding:12px 16px;margin-bottom:8px;">
+  <div style="font-weight:700;color:#1a1a2e;">
+    [ADR-048] Standardize vendor invoice workflow through Corrigo
+    <span class="badge badge-p3">proposed</span>
+  </div>
+  <div style="font-size:12px;color:#718096;margin-top:4px;">
+    Impact: Vendor Management / Finance
+  </div>
+  <div style="margin-top:4px;">Route all vendor invoices through Corrigo WO close-out process instead of separate AP email chain. Eliminates duplicate data entry and provides audit trail.</div>
+</div>
+</div>
+
+<div class="footer">
+  <div>Generated: February 07, 2026 at 05:24 AM CT</div>
+  <div>Report for: tony.vita@jll.com, juan.guerra@jll.com</div>
+  <div class="powered-by">Powered by <strong>CoreSkills MAO</strong> &bull; JLL Technologies</div>
+</div>
+</div>
+</body>
+</html>

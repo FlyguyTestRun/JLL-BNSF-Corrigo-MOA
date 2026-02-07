@@ -1,0 +1,655 @@
+{
+  "report_date": "2026-02-07",
+  "campus_name": "BNSF HQ Campus",
+  "generated_at": "2026-02-07T05:24:46.400002",
+  "sections": {
+    "executive_summary": {
+      "bullets": [
+        "9 open work orders (1 P1-Emergency, 1 P2-Urgent)",
+        "4 PMs due today, 2 overdue | Compliance: 20%",
+        "SLA Alert: 5 BREACHED, 1 at risk (within 4h)",
+        "Staffing: 3/7 technicians active"
+      ],
+      "total_open_wos": 9,
+      "p1_count": 1,
+      "p2_count": 1,
+      "sla_breached": 5,
+      "sla_at_risk": 1,
+      "pms_due": 4,
+      "pms_overdue": 2,
+      "active_techs": 3,
+      "total_techs": 7
+    },
+    "work_order_status": {
+      "total_open": 9,
+      "by_priority": {
+        "P1": [
+          {
+            "wo_number": "WO-50108",
+            "title": "Fire alarm pull station loose - NOC entrance",
+            "building": "Network Operations Center",
+            "floor": "1",
+            "trade": "Fire Safety",
+            "priority": "P1",
+            "assigned_tech": "Anthony Garcia",
+            "created_at": "2026-02-04T16:19:01.349429",
+            "sla_deadline": "2026-02-04T17:19:01.349429",
+            "sla_status": "red",
+            "age_hours": 61.1,
+            "status": "In Progress"
+          }
+        ],
+        "P2": [
+          {
+            "wo_number": "WO-50102",
+            "title": "UPS battery replacement - server room B",
+            "building": "Data Center",
+            "floor": "1",
+            "trade": "Electrical",
+            "priority": "P2",
+            "assigned_tech": "Carlos Reyes",
+            "created_at": "2026-02-06T14:41:45.588040",
+            "sla_deadline": "2026-02-06T18:41:45.588040",
+            "sla_status": "red",
+            "age_hours": 14.7,
+            "status": "In Progress"
+          }
+        ],
+        "P3": [
+          {
+            "wo_number": "WO-50106",
+            "title": "Roof exhaust fan #4 bearing noise",
+            "building": "Data Center",
+            "floor": "Roof",
+            "trade": "HVAC",
+            "priority": "P3",
+            "assigned_tech": "Robert Chen",
+            "created_at": "2026-02-06T13:31:04.636961",
+            "sla_deadline": "2026-02-06T21:31:04.636961",
+            "sla_status": "red",
+            "age_hours": 15.9,
+            "status": "Open"
+          },
+          {
+            "wo_number": "WO-50107",
+            "title": "Water leak under sink in 2nd floor men's restroom",
+            "building": "Main HQ",
+            "floor": "2",
+            "trade": "Plumbing",
+            "priority": "P3",
+            "assigned_tech": "James Parker",
+            "created_at": "2026-02-06T22:16:53.619241",
+            "sla_deadline": "2026-02-07T06:16:53.619241",
+            "sla_status": "yellow",
+            "age_hours": 7.1,
+            "status": "In Progress"
+          },
+          {
+            "wo_number": "WO-50100",
+            "title": "Hot water heater pilot light out - maintenance shop",
+            "building": "Maintenance Shop",
+            "floor": "1",
+            "trade": "Plumbing",
+            "priority": "P3",
+            "assigned_tech": "James Parker",
+            "created_at": "2026-02-07T02:38:25.537628",
+            "sla_deadline": "2026-02-07T10:38:25.537628",
+            "sla_status": "green",
+            "age_hours": 2.8,
+            "status": "Open"
+          }
+        ],
+        "P4": [
+          {
+            "wo_number": "WO-50104",
+            "title": "Parking garage A level 3 light outage section C",
+            "building": "Parking Garage A",
+            "floor": "3",
+            "trade": "Electrical",
+            "priority": "P4",
+            "assigned_tech": "Carlos Reyes",
+            "created_at": "2026-02-04T22:39:29.383028",
+            "sla_deadline": "2026-02-05T22:39:29.383028",
+            "sla_status": "red",
+            "age_hours": 54.8,
+            "status": "On Hold"
+          },
+          {
+            "wo_number": "WO-50105",
+            "title": "Clogged floor drain - training center lobby",
+            "building": "Training Center",
+            "floor": "1",
+            "trade": "Plumbing",
+            "priority": "P4",
+            "assigned_tech": "James Parker",
+            "created_at": "2026-02-05T22:41:45.453242",
+            "sla_deadline": "2026-02-06T22:41:45.453242",
+            "sla_status": "red",
+            "age_hours": 30.7,
+            "status": "Open"
+          },
+          {
+            "wo_number": "WO-50101",
+            "title": "Replace ballasts in parking garage B level 2",
+            "building": "Parking Garage B",
+            "floor": "2",
+            "trade": "Electrical",
+            "priority": "P4",
+            "assigned_tech": "Carlos Reyes",
+            "created_at": "2026-02-06T12:16:39.485368",
+            "sla_deadline": "2026-02-07T12:16:39.485368",
+            "sla_status": "green",
+            "age_hours": 17.1,
+            "status": "On Hold"
+          }
+        ],
+        "P5": [
+          {
+            "wo_number": "WO-50103",
+            "title": "Broken tile in cafeteria main dining area",
+            "building": "Cafeteria",
+            "floor": "1",
+            "trade": "General",
+            "priority": "P5",
+            "assigned_tech": "David Kim",
+            "created_at": "2026-02-05T20:47:39.990814",
+            "sla_deadline": "2026-02-08T20:47:39.990814",
+            "sla_status": "green",
+            "age_hours": 32.6,
+            "status": "Open"
+          }
+        ]
+      },
+      "priority_counts": {
+        "P1": 1,
+        "P2": 1,
+        "P3": 3,
+        "P4": 3,
+        "P5": 1
+      }
+    },
+    "pm_schedule": {
+      "due_today": [
+        {
+          "pm_id": "PM-8000",
+          "title": "PM - Quarterly emergency generator load test",
+          "building": "Network Operations Center",
+          "floor": "3",
+          "trade": "Electrical",
+          "assigned_tech": "Carlos Reyes",
+          "due_date": "2026-02-07",
+          "frequency": "quarterly",
+          "is_overdue": false,
+          "is_completed": false,
+          "estimated_minutes": 60
+        },
+        {
+          "pm_id": "PM-8002",
+          "title": "PM - Monthly elevator safety inspection",
+          "building": "Main HQ",
+          "floor": "1",
+          "trade": "Elevator",
+          "assigned_tech": "Marcus Williams",
+          "due_date": "2026-02-07",
+          "frequency": "monthly",
+          "is_overdue": false,
+          "is_completed": true,
+          "estimated_minutes": 120
+        },
+        {
+          "pm_id": "PM-8003",
+          "title": "PM - Weekly cooling tower water treatment",
+          "building": "Main HQ",
+          "floor": "1",
+          "trade": "HVAC",
+          "assigned_tech": "Mike Rodriguez",
+          "due_date": "2026-02-07",
+          "frequency": "weekly",
+          "is_overdue": false,
+          "is_completed": false,
+          "estimated_minutes": 60
+        }
+      ],
+      "overdue": [
+        {
+          "pm_id": "PM-8001",
+          "title": "PM - Monthly HVAC filter change - Data Center",
+          "building": "Data Center",
+          "floor": "2",
+          "trade": "HVAC",
+          "assigned_tech": "Mike Rodriguez",
+          "due_date": "2026-02-04",
+          "frequency": "monthly",
+          "is_overdue": true,
+          "is_completed": false,
+          "estimated_minutes": 120
+        },
+        {
+          "pm_id": "PM-8099",
+          "title": "PM - Overdue quarterly chiller inspection",
+          "building": "Data Center",
+          "floor": "Roof",
+          "trade": "HVAC",
+          "assigned_tech": "Mike Rodriguez",
+          "due_date": "2026-02-02",
+          "frequency": "quarterly",
+          "is_overdue": true,
+          "is_completed": false,
+          "estimated_minutes": 120
+        }
+      ],
+      "due_today_count": 3,
+      "overdue_count": 2,
+      "completed_today_count": 1,
+      "total_completed": 1,
+      "completion_rate_today": 33.3,
+      "compliance_trend_7d": [
+        100.0,
+        50.0,
+        66.7,
+        71.4,
+        100.0,
+        66.7,
+        75.0
+      ]
+    },
+    "technician_workload": {
+      "technicians": [
+        {
+          "tech_id": "T-201",
+          "name": "Mike Rodriguez",
+          "trade": "HVAC",
+          "tasks_today": 3,
+          "estimated_hours": 2.5,
+          "completed_today": 0,
+          "current_task": "Shift not started",
+          "status": "not-started"
+        },
+        {
+          "tech_id": "T-202",
+          "name": "Carlos Reyes",
+          "trade": "Electrical",
+          "tasks_today": 4,
+          "estimated_hours": 7.9,
+          "completed_today": 0,
+          "current_task": "UPS battery replacement - server room B",
+          "status": "active"
+        },
+        {
+          "tech_id": "T-203",
+          "name": "James Parker",
+          "trade": "Plumbing",
+          "tasks_today": 5,
+          "estimated_hours": 5.4,
+          "completed_today": 0,
+          "current_task": "Water leak under sink in 2nd floor men's restroom",
+          "status": "active"
+        },
+        {
+          "tech_id": "T-204",
+          "name": "David Kim",
+          "trade": "General",
+          "tasks_today": 5,
+          "estimated_hours": 8.1,
+          "completed_today": 2,
+          "current_task": "En route to assignment",
+          "status": "active"
+        },
+        {
+          "tech_id": "T-205",
+          "name": "Robert Chen",
+          "trade": "HVAC",
+          "tasks_today": 3,
+          "estimated_hours": 5.6,
+          "completed_today": 1,
+          "current_task": "Shift not started",
+          "status": "not-started"
+        },
+        {
+          "tech_id": "T-206",
+          "name": "Marcus Williams",
+          "trade": "Elevator",
+          "tasks_today": 1,
+          "estimated_hours": 1.5,
+          "completed_today": 0,
+          "current_task": "On break",
+          "status": "break"
+        },
+        {
+          "tech_id": "T-207",
+          "name": "Anthony Garcia",
+          "trade": "Fire Safety",
+          "tasks_today": 1,
+          "estimated_hours": 0.8,
+          "completed_today": 0,
+          "current_task": "On break",
+          "status": "break"
+        }
+      ],
+      "total_tasks_assigned": 22,
+      "total_estimated_hours": 31.8,
+      "total_completed_today": 3,
+      "status_breakdown": {
+        "active": 3,
+        "break": 2,
+        "off-site": 0,
+        "not-started": 2
+      }
+    },
+    "sla_watchlist": {
+      "watchlist": [
+        {
+          "wo_number": "WO-50102",
+          "title": "UPS battery replacement - server room B",
+          "building": "Data Center",
+          "floor": "1",
+          "trade": "Electrical",
+          "priority": "P2",
+          "assigned_tech": "Carlos Reyes",
+          "created_at": "2026-02-06T14:41:45.588040",
+          "sla_deadline": "2026-02-06T18:41:45.588040",
+          "sla_status": "red",
+          "age_hours": 14.7,
+          "status": "In Progress",
+          "breach_type": "BREACHED",
+          "hours_past_sla": 10.7
+        },
+        {
+          "wo_number": "WO-50104",
+          "title": "Parking garage A level 3 light outage section C",
+          "building": "Parking Garage A",
+          "floor": "3",
+          "trade": "Electrical",
+          "priority": "P4",
+          "assigned_tech": "Carlos Reyes",
+          "created_at": "2026-02-04T22:39:29.383028",
+          "sla_deadline": "2026-02-05T22:39:29.383028",
+          "sla_status": "red",
+          "age_hours": 54.8,
+          "status": "On Hold",
+          "breach_type": "BREACHED",
+          "hours_past_sla": 30.8
+        },
+        {
+          "wo_number": "WO-50105",
+          "title": "Clogged floor drain - training center lobby",
+          "building": "Training Center",
+          "floor": "1",
+          "trade": "Plumbing",
+          "priority": "P4",
+          "assigned_tech": "James Parker",
+          "created_at": "2026-02-05T22:41:45.453242",
+          "sla_deadline": "2026-02-06T22:41:45.453242",
+          "sla_status": "red",
+          "age_hours": 30.7,
+          "status": "Open",
+          "breach_type": "BREACHED",
+          "hours_past_sla": 6.7
+        },
+        {
+          "wo_number": "WO-50106",
+          "title": "Roof exhaust fan #4 bearing noise",
+          "building": "Data Center",
+          "floor": "Roof",
+          "trade": "HVAC",
+          "priority": "P3",
+          "assigned_tech": "Robert Chen",
+          "created_at": "2026-02-06T13:31:04.636961",
+          "sla_deadline": "2026-02-06T21:31:04.636961",
+          "sla_status": "red",
+          "age_hours": 15.9,
+          "status": "Open",
+          "breach_type": "BREACHED",
+          "hours_past_sla": 7.9
+        },
+        {
+          "wo_number": "WO-50108",
+          "title": "Fire alarm pull station loose - NOC entrance",
+          "building": "Network Operations Center",
+          "floor": "1",
+          "trade": "Fire Safety",
+          "priority": "P1",
+          "assigned_tech": "Anthony Garcia",
+          "created_at": "2026-02-04T16:19:01.349429",
+          "sla_deadline": "2026-02-04T17:19:01.349429",
+          "sla_status": "red",
+          "age_hours": 61.1,
+          "status": "In Progress",
+          "breach_type": "BREACHED",
+          "hours_past_sla": 60.1
+        },
+        {
+          "wo_number": "WO-50107",
+          "title": "Water leak under sink in 2nd floor men's restroom",
+          "building": "Main HQ",
+          "floor": "2",
+          "trade": "Plumbing",
+          "priority": "P3",
+          "assigned_tech": "James Parker",
+          "created_at": "2026-02-06T22:16:53.619241",
+          "sla_deadline": "2026-02-07T06:16:53.619241",
+          "sla_status": "yellow",
+          "age_hours": 7.1,
+          "status": "In Progress",
+          "breach_type": "AT_RISK",
+          "hours_until_breach": 0.9
+        }
+      ],
+      "total_at_risk": 1,
+      "total_breached": 5,
+      "warning_window_hours": 4
+    },
+    "yesterdays_completions": {
+      "date": "2026-02-06",
+      "completed_count": 7,
+      "created_count": 6,
+      "avg_cycle_hours": 14.9,
+      "callbacks": 1,
+      "sla_breaches": 1
+    },
+    "vendor_activity": {
+      "open_vendor_wos": [
+        {
+          "wo_number": "VWO-3001",
+          "vendor_name": "ThyssenKrupp Elevator",
+          "description": "Elevator B door operator replacement",
+          "building": "Main HQ",
+          "status": "Scheduled",
+          "scheduled_date": "2026-02-07",
+          "invoice_status": "Pending",
+          "estimated_cost": 4500.0
+        },
+        {
+          "wo_number": "VWO-3002",
+          "vendor_name": "Johnson Controls",
+          "description": "BAS controller firmware update - all AHUs",
+          "building": "Data Center",
+          "status": "In Progress",
+          "scheduled_date": "2026-02-06",
+          "invoice_status": "Pending",
+          "estimated_cost": 8200.0
+        },
+        {
+          "wo_number": "VWO-3003",
+          "vendor_name": "Siemens Fire Safety",
+          "description": "Annual fire alarm panel inspection",
+          "building": "Network Operations Center",
+          "status": "Awaiting Parts",
+          "scheduled_date": "2026-02-10",
+          "invoice_status": "Not Invoiced",
+          "estimated_cost": 3100.0
+        }
+      ],
+      "total_open": 3,
+      "arriving_today": [
+        {
+          "wo_number": "VWO-3001",
+          "vendor_name": "ThyssenKrupp Elevator",
+          "description": "Elevator B door operator replacement",
+          "building": "Main HQ",
+          "status": "Scheduled",
+          "scheduled_date": "2026-02-07",
+          "invoice_status": "Pending",
+          "estimated_cost": 4500.0
+        }
+      ],
+      "arriving_today_count": 1,
+      "pending_invoices_count": 3,
+      "total_outstanding_cost": 14550.0
+    },
+    "weekly_trends": {
+      "dates": [
+        "2026-01-31",
+        "2026-02-01",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06"
+      ],
+      "wo_volume": [
+        6,
+        6,
+        6,
+        4,
+        9,
+        9,
+        6
+      ],
+      "wo_volume_trend": "up",
+      "avg_cycle_time": [
+        6.5,
+        6.1,
+        5.7,
+        6.5,
+        13.9,
+        15.2,
+        14.9
+      ],
+      "cycle_time_trend": "up",
+      "pm_compliance": [
+        100.0,
+        50.0,
+        66.7,
+        71.4,
+        100.0,
+        66.7,
+        75.0
+      ],
+      "pm_compliance_trend": "up"
+    },
+    "action_items": {
+      "items": [
+        {
+          "item_id": "AI-001",
+          "description": "Approve overtime for Carlos Reyes - UPS battery replacement requires after-hours work",
+          "urgency": "high",
+          "related_wo": "WO-50107",
+          "owner": "Tony Vita",
+          "due_by": "noon"
+        },
+        {
+          "item_id": "AI-002",
+          "description": "Review ThyssenKrupp elevator repair proposal ($4,500) - door operator replacement",
+          "urgency": "high",
+          "related_wo": "VWO-3001",
+          "owner": "Tony Vita",
+          "due_by": "EOD"
+        },
+        {
+          "item_id": "AI-003",
+          "description": "Reassign PM backlog - 1 overdue chiller inspection needs scheduling",
+          "urgency": "medium",
+          "related_wo": "PM-8099",
+          "owner": "Juan Guerra",
+          "due_by": "EOD"
+        },
+        {
+          "item_id": "AI-004",
+          "description": "Coordinate with NOC manager on fire alarm pull station repair window",
+          "urgency": "high",
+          "related_wo": "WO-50109",
+          "owner": "Juan Guerra",
+          "due_by": "ASAP"
+        },
+        {
+          "item_id": "AI-005",
+          "description": "Review weekly PM compliance trend - declining 3 days running",
+          "urgency": "medium",
+          "related_wo": null,
+          "owner": "Juan Guerra",
+          "due_by": "EOD"
+        }
+      ],
+      "total_count": 5,
+      "high_urgency_count": 3,
+      "by_owner": {
+        "Tony Vita": [
+          {
+            "item_id": "AI-001",
+            "description": "Approve overtime for Carlos Reyes - UPS battery replacement requires after-hours work",
+            "urgency": "high",
+            "related_wo": "WO-50107",
+            "owner": "Tony Vita",
+            "due_by": "noon"
+          },
+          {
+            "item_id": "AI-002",
+            "description": "Review ThyssenKrupp elevator repair proposal ($4,500) - door operator replacement",
+            "urgency": "high",
+            "related_wo": "VWO-3001",
+            "owner": "Tony Vita",
+            "due_by": "EOD"
+          }
+        ],
+        "Juan Guerra": [
+          {
+            "item_id": "AI-003",
+            "description": "Reassign PM backlog - 1 overdue chiller inspection needs scheduling",
+            "urgency": "medium",
+            "related_wo": "PM-8099",
+            "owner": "Juan Guerra",
+            "due_by": "EOD"
+          },
+          {
+            "item_id": "AI-004",
+            "description": "Coordinate with NOC manager on fire alarm pull station repair window",
+            "urgency": "high",
+            "related_wo": "WO-50109",
+            "owner": "Juan Guerra",
+            "due_by": "ASAP"
+          },
+          {
+            "item_id": "AI-005",
+            "description": "Review weekly PM compliance trend - declining 3 days running",
+            "urgency": "medium",
+            "related_wo": null,
+            "owner": "Juan Guerra",
+            "due_by": "EOD"
+          }
+        ]
+      }
+    },
+    "adr_highlights": {
+      "highlights": [
+        {
+          "adr_id": "ADR-047",
+          "title": "Adopt predictive maintenance scheduling for HVAC fleet",
+          "status": "proposed",
+          "summary": "Replace calendar-based PM schedules with sensor-driven predictive triggers for the 12 main AHUs. Expected to reduce unnecessary PMs by 20% while catching failures earlier.",
+          "impact_area": "HVAC Operations / PM Scheduling",
+          "date_created": "2026-02-06"
+        },
+        {
+          "adr_id": "ADR-048",
+          "title": "Standardize vendor invoice workflow through Corrigo",
+          "status": "proposed",
+          "summary": "Route all vendor invoices through Corrigo WO close-out process instead of separate AP email chain. Eliminates duplicate data entry and provides audit trail.",
+          "impact_area": "Vendor Management / Finance",
+          "date_created": "2026-02-06"
+        }
+      ],
+      "total_new": 2
+    }
+  }
+}

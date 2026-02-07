@@ -1,0 +1,120 @@
+==============================================================================
+  DAILY MAINTENANCE REPORT -- BNSF HQ CAMPUS
+  Saturday, February 07, 2026
+  Fort Worth, TX | JLL Facility Management
+==============================================================================
+
+------------------------------------------------------------------------------
+  EXECUTIVE SUMMARY
+------------------------------------------------------------------------------
+  * 9 open work orders (1 P1-Emergency, 1 P2-Urgent)
+  * 4 PMs due today, 2 overdue | Compliance: 20%
+  * SLA Alert: 5 BREACHED, 1 at risk (within 4h)
+  * Staffing: 3/7 technicians active
+
+------------------------------------------------------------------------------
+  OPEN WORK ORDERS (9)
+------------------------------------------------------------------------------
+  WO#          Description                  Bldg           Trade      Tech           Age(h)    SLA
+  --------------------------------------------------------------------------
+  [P1] Emergency
+  WO-50108     Fire alarm pull station lo.. Network Oper.. Fire Safety Anthony Garcia 61.1     [XX]
+
+  [P2] Urgent
+  WO-50102     UPS battery replacement - .. Data Center    Electrical Carlos Reyes   14.7     [XX]
+
+  [P3] High
+  WO-50106     Roof exhaust fan #4 bearin.. Data Center    HVAC       Robert Chen    15.9     [XX]
+  WO-50107     Water leak under sink in 2.. Main HQ        Plumbing   James Parker   7.1      [!!]
+  WO-50100     Hot water heater pilot lig.. Maintenance .. Plumbing   James Parker   2.8      [OK]
+
+  [P4] Routine
+  WO-50104     Parking garage A level 3 l.. Parking Gara.. Electrical Carlos Reyes   54.8     [XX]
+  WO-50105     Clogged floor drain - trai.. Training Cen.. Plumbing   James Parker   30.7     [XX]
+  WO-50101     Replace ballasts in parkin.. Parking Gara.. Electrical Carlos Reyes   17.1     [OK]
+
+  [P5] Low
+  WO-50103     Broken tile in cafeteria m.. Cafeteria      General    David Kim      32.6     [OK]
+
+------------------------------------------------------------------------------
+  PM SCHEDULE -- Due Today: 3 | Overdue: 2 | Completion: 33%
+------------------------------------------------------------------------------
+  [    ] PM-8000    PM - Quarterly emergency generator load  Network Operat
+  [DONE] PM-8002    PM - Monthly elevator safety inspection  Main HQ       
+  [    ] PM-8003    PM - Weekly cooling tower water treatmen Main HQ       
+  OVERDUE:
+  [LATE] PM-8001    PM - Monthly HVAC filter change - Data C Data Center
+  [LATE] PM-8099    PM - Overdue quarterly chiller inspectio Data Center
+
+------------------------------------------------------------------------------
+  TECHNICIAN WORKLOAD
+------------------------------------------------------------------------------
+  Name                 Trade        Tasks   Est.Hrs   Done   Status       Current Task
+  --------------------------------------------------------------------------
+  Mike Rodriguez       HVAC         3       2.5       0      not-started  Shift not started
+  Carlos Reyes         Electrical   4       7.9       0      active       UPS battery replacem
+  James Parker         Plumbing     5       5.4       0      active       Water leak under sin
+  David Kim            General      5       8.1       2      active       En route to assignme
+  Robert Chen          HVAC         3       5.6       1      not-started  Shift not started
+  Marcus Williams      Elevator     1       1.5       0      break        On break
+  Anthony Garcia       Fire Safety  1       0.8       0      break        On break
+
+------------------------------------------------------------------------------
+  *** SLA WATCHLIST *** (5 breached, 1 at risk)
+------------------------------------------------------------------------------
+  WO-50102     UPS battery replacement - serv P2   BREACHED (+10.7h)
+  WO-50104     Parking garage A level 3 light P4   BREACHED (+30.8h)
+  WO-50105     Clogged floor drain - training P4   BREACHED (+6.7h)
+  WO-50106     Roof exhaust fan #4 bearing no P3   BREACHED (+7.9h)
+  WO-50108     Fire alarm pull station loose  P1   BREACHED (+60.1h)
+  WO-50107     Water leak under sink in 2nd f P3   AT RISK (0.9h remaining)
+
+------------------------------------------------------------------------------
+  YESTERDAY'S COMPLETIONS (2026-02-06)
+------------------------------------------------------------------------------
+  Completed: 7
+  Created:   6
+  Avg Cycle: 14.9 hours
+  Callbacks: 1
+  SLA Breaches: 1
+
+------------------------------------------------------------------------------
+  VENDOR ACTIVITY -- Open: 3 | Arriving Today: 1
+------------------------------------------------------------------------------
+  VWO-3001     ThyssenKrupp Elevator Elevator B door operator repla Scheduled
+  VWO-3002     Johnson Controls     BAS controller firmware update In Progress
+  VWO-3003     Siemens Fire Safety  Annual fire alarm panel inspec Awaiting Parts
+  Pending Invoices: 3 ($14,550.00 outstanding)
+
+------------------------------------------------------------------------------
+  7-DAY TRENDS
+------------------------------------------------------------------------------
+  WO Volume (trend: up):  6 -> 6 -> 6 -> 4 -> 9 -> 9 -> 6
+  Cycle Time (trend: up): 6.5h -> 6.1h -> 5.7h -> 6.5h -> 13.9h -> 15.2h -> 14.9h
+  PM Compliance (trend: up): 100% -> 50% -> 67% -> 71% -> 100% -> 67% -> 75%
+
+------------------------------------------------------------------------------
+  ACTION ITEMS REQUIRING ATTENTION (5 items, 3 high urgency)
+------------------------------------------------------------------------------
+  Tony Vita:
+    >>> Approve overtime for Carlos Reyes - UPS battery replacement requires after-hours work [ref: WO-50107] -- noon
+    >>> Review ThyssenKrupp elevator repair proposal ($4,500) - door operator replacement [ref: VWO-3001] -- EOD
+  Juan Guerra:
+     >> Reassign PM backlog - 1 overdue chiller inspection needs scheduling [ref: PM-8099] -- EOD
+    >>> Coordinate with NOC manager on fire alarm pull station repair window [ref: WO-50109] -- ASAP
+     >> Review weekly PM compliance trend - declining 3 days running -- EOD
+
+------------------------------------------------------------------------------
+  NEW ADRs FOR REVIEW (2)
+------------------------------------------------------------------------------
+  [ADR-047] Adopt predictive maintenance scheduling for HVAC fleet (proposed)
+    Impact: HVAC Operations / PM Scheduling
+    Replace calendar-based PM schedules with sensor-driven predictive triggers for the 12 main AHUs. Expected to reduce unnecessary PMs by 20% while catching failures earlier.
+  [ADR-048] Standardize vendor invoice workflow through Corrigo (proposed)
+    Impact: Vendor Management / Finance
+    Route all vendor invoices through Corrigo WO close-out process instead of separate AP email chain. Eliminates duplicate data entry and provides audit trail.
+
+==============================================================================
+  Generated: 2026-02-07 05:24:46  CT
+  Powered by CoreSkills MAO | JLL Technologies
+==============================================================================
